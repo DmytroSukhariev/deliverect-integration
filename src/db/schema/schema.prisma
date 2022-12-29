@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DB_CONNECTION_URL")
+}
+
+model Token {
+    value String @id
+    expirationDate DateTime @map("expiration_date")
+    tokenType String?
+    scope String?
+}

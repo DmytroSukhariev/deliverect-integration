@@ -5,9 +5,11 @@
   "author": "Dmytro Sukhariev <dmytro.sukhariev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prisma:migrate": "yarn exec prisma migrate dev -n",
+    "run:file": "ts-node -r tsconfig-paths/register -r dotenv/config",
+    "prisma:migrate": "yarn exec prisma migrate dev",
     "init:env": "cp .env.example .env",
-    "start": "ts-node -r tsconfig-paths/register src/index.ts"
+    "start": "yarn run:file src/server",
+    "start:mock-deliverect": "yarn run:file src/mock-deliverect-server"
   },
   "devDependencies": {
     "@types/express": "^4.17.15",
