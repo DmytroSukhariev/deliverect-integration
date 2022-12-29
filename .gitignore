@@ -1,0 +1,5 @@
+.idea
+.env
+node_modules/
+src/db/schema/dev.db
+src/db/schema/dev.db-journal
